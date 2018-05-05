@@ -10,12 +10,24 @@ namespace DataProvider.Test
         [TestMethod]
         public void SavePerson()
         {
-            var person = new Person();
-            person.Name = "atif";
-            person.Surname = "galamov";
-            person.Lastname = "sabir";
-
-            person.Save();
+            Me.Save();
         }
-    }
+
+        [TestMethod]
+        public void SaveEmployee()
+        {
+            var employee = new Employee();
+            employee.Person = Me;
+            employee.Salary = 100;
+
+            employee.Save();
+        }
+
+        public Person Me => new Person
+        {
+            Name = "John",
+            Surname = "Coffey",
+            Lastname = "???"
+        };
+}
 }

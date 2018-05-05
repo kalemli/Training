@@ -80,8 +80,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Mappings\BaseClassMap.cs" />
+    <Compile Include="Mappings\EmployeeMap.cs" />
     <Compile Include="Mappings\PersonMap.cs" />
     <Compile Include="Models\BaseModel.cs" />
+    <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\BaseRepository.cs" />
