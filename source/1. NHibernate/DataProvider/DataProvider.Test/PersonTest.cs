@@ -10,24 +10,27 @@ namespace DataProvider.Test
         [TestMethod]
         public void SavePerson()
         {
-            Me.Save();
+            Constants.PersonJohn.Save();
         }
 
         [TestMethod]
         public void SaveEmployee()
         {
             var employee = new Employee();
-            employee.Person = Me;
+            employee.Person = Constants.PersonJohn;
             employee.Salary = 100;
 
             employee.Save();
         }
 
-        public Person Me => new Person
+        [TestMethod]
+        public void GetPerson()
         {
-            Name = "John",
-            Surname = "Coffey",
-            Lastname = "???"
-        };
-}
+            var person = Person.Get(p => p.Id == 1) as Person;
+            Assert.IsNotNull(person);
+            Assert.AreEqual(person.Name, Constants.PersonJohn.Name);
+            Assert.AreEqual(person.Surname, Constants.PersonJohn.Surname);
+            Assert.AreEqual(person.Lastname, Constants.PersonJohn.Lastname);
+        }
+    }
 }
