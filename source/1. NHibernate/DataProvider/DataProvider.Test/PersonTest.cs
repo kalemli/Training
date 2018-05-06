@@ -10,14 +10,15 @@ namespace DataProvider.Test
         [TestMethod]
         public void SavePerson()
         {
-            Constants.PersonJohn.Save();
+            foreach (var person in Constants.PersonList)
+                person.Save();
         }
 
         [TestMethod]
         public void SaveEmployee()
         {
             var employee = new Employee();
-            employee.Person = Constants.PersonJohn;
+            employee.Person = Constants.PersonList[0];
             employee.Salary = 100;
 
             employee.Save();
@@ -28,9 +29,8 @@ namespace DataProvider.Test
         {
             var person = Person.Get(p => p.Id == 1) as Person;
             Assert.IsNotNull(person);
-            Assert.AreEqual(person.Name, Constants.PersonJohn.Name);
-            Assert.AreEqual(person.Surname, Constants.PersonJohn.Surname);
-            Assert.AreEqual(person.Lastname, Constants.PersonJohn.Lastname);
+            Assert.AreEqual(person.Name, Constants.PersonList[0].Name);
+            Assert.AreEqual(person.Surname, Constants.PersonList[1].Surname);
         }
     }
 }

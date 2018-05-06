@@ -10,6 +10,5 @@ namespace DataProvider.Models
     {
         public virtual string Name { get; set; }
         public virtual string Surname { get; set; }
-        public virtual string Lastname { get; set; }
     }
 }

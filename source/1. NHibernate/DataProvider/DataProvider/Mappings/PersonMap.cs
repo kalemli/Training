@@ -15,7 +15,6 @@ namespace DataProvider.Mappings
             Table("Person");
             Map(x => x.Name);
             Map(x => x.Surname);
-            Map(x => x.Lastname);
         }
     }
 }
