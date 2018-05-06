@@ -30,7 +30,7 @@ namespace DataProvider.Test
             var person = Person.Get(p => p.Id == 1) as Person;
             Assert.IsNotNull(person);
             Assert.AreEqual(person.Name, Constants.PersonList[0].Name);
-            Assert.AreEqual(person.Surname, Constants.PersonList[1].Surname);
+            Assert.AreEqual(person.Surname, Constants.PersonList[0].Surname);
         }
     }
 }
