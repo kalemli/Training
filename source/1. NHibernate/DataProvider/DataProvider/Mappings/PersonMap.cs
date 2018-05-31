@@ -15,6 +15,7 @@ namespace DataProvider.Mappings
             Table("Person");
             Map(x => x.Name);
             Map(x => x.Surname);
+            HasOne(x => x.PersonDetail).Cascade.All();
         }
     }
 }

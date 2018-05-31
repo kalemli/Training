@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace DataProvider.Models
 {
-    public class Person: BaseModel
+    public class Country: BaseModel
     {
         public virtual string Name { get; set; }
-        public virtual string Surname { get; set; }
-        public virtual PersonDetail PersonDetail { get; set; }
+        public virtual string State { get; set; }
     }
 }

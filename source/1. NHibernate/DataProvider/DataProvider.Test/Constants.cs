@@ -1,28 +1,35 @@
-﻿using DataProvider.Models;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataProvider.Test
 {
     public class Constants
     {
-        public static List<Person> PersonList { get; set; }
+        public static List<dynamic> DataList { get; set; }
 
         static Constants()
         {
-            PersonList = new List<Person>();
+            DataList = new List<dynamic>();
             string[] lines = File.ReadAllLines("us-500.csv");
             for (int i = 1; i < lines.Length; i++)
             {
                 string line = lines[i];
                 string[] columns = line.Split(',');
-                PersonList.Add(new Person {
-                    Name = columns[0].Replace("\"", ""),
-                    Surname = columns[1].Replace("\"", "")
+
+                DataList.Add(new
+                {
+                    FirstName = columns[0].Replace("\"", ""),
+                    Surname = columns[1].Replace("\"", ""),
+                    CompanyName = columns[2].Replace("\"", ""),
+                    Address = columns[3].Replace("\"", ""),
+                    City = columns[4].Replace("\"", ""),
+                    Country = columns[5].Replace("\"", ""),
+                    State = columns[6].Replace("\"", ""),
+                    Zip = columns[7].Replace("\"", ""),
+                    Phone1 = columns[8].Replace("\"", ""),
+                    Phone2 = columns[9].Replace("\"", ""),
+                    Email = columns[10].Replace("\"", ""),
+                    Web = columns[11].Replace("\"", "")
                 });
             }
         }
