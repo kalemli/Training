@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Samples";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+
+<div class="alert alert-info" role="alert">
+    <span class="glyphicon glyphicon-apple"></span>
+    Use this area to provide additional information.
+</div>
+
+<div class="alert alert-success">
+    Successfully completed!
+</div>
+
+<div class="row">
+    <div class="col-sm-8">
+        <div class="row">
+            <div class="col-sm-4">
+                Code is documentation. Any kind of documentation should be understandable by its readers.
+                The readers of code are a compiler or interpreter, and other developers.
+                So it is not enough if your code compiles. Other developers need to understand it as well. They need to work on your code in the future, change it and extend it.
+            </div>
+            <div class="col-sm-4">
+                When there’s a new requirement, you need to understand how implementing it affects the existing code.
+                That can be a challenge if your software has been around for some time. Quite often, I have heard a dialogue like this:
+                X: We can’t go on with feature foo.
+            </div>
+            <div class="col-sm-4">
+                X: Cause Z is the only one who knows about the code. He has implemented the code that we need to change now.
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        When there’s a new requirement, you need to understand how implementing it affects the existing code.
+        That can be a challenge if your software has been around for some time. Quite often, I have heard a dialogue like this:
+        X: We can’t go on with feature foo.
+        Y: Why?
+        X: Cause Z is the only one who knows about the code. He has implemented the code that we need to change now.
+        Y: Well, why don’t we ask him?
+        X: Because he is sick / on vacation / at a conference / no longer at the company.
+        Y: Oh…
+        Here’s the thing. To find out if your code is understandable, somebody else should try to understand it.
+        There are techniques for that. Pair programming is a good one. Or you sit down with other developers. You walk them through the code you have written.
+        Still, what if many developers are involved with a product? What if the development teams change their members? That makes it harder to write code that enough other people understand.
+    </div>
+</div>
+
