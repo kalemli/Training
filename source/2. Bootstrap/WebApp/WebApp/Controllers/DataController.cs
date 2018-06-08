@@ -1,21 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using System.Collections.Generic;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using WebApp.Models;
 using WebApp.Repositories;
+using Newtonsoft.Json;
 
 namespace WebApp.Controllers
 {
     [Produces("application/json")]
-    [Route("api/Data")]
     public class DataController : Controller
     {
-        public List<Person> PersonList()
+        [HttpGet]
+        [Route("api/data/person-list")]
+        public List<Person> GetPersonList()
         {
-            return PersonRepository.GetPersonList();
+            return PersonList;
+        }
+
+        private List<Person> PersonList
+        {
+            get
+            {
+                if (_PersonList == null)
+                {
+                    string data = System.IO.File.ReadAllText(_env.ContentRootPath + @"\wwwroot\data\MOCK_DATA.json");
+                    _PersonList = JsonConvert.DeserializeObject<List<Person>>(data);
+                }
+                return _PersonList;
+            }
+        }
+
+        private IHostingEnvironment _env;
+        private static List<Person> _PersonList;
+
+        public DataController(IHostingEnvironment env)
+        {
+            _env = env;
         }
     }
 }
