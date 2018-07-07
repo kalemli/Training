@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/* Singleton: A class of which only a single instance can exist */
 namespace DesignPatterns.Creational.Singleton
 {
     public class LoadBalancer
