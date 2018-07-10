@@ -42,7 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsoleMenu.cs" />
     <Compile Include="Creational\Singleton\LoadBalancer.cs" />
+    <Compile Include="Creational\Singleton\SingletonPattern.cs" />
+    <Compile Include="DesignPattern.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
