@@ -6,17 +6,11 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.Creational.Singleton
 {
-    public class SingletonPattern : DesignPattern
+    public class Showcase : DesignPattern
     {
-        public override string Category
-        {
-            get { return "Creational"; }
-        }
+        public override string Category => "Creational";
 
-        public override string Name
-        {
-            get { return "Singleton"; }
-        }
+        public override string Name => "Singleton";
 
         public override void ShowExample()
         {

@@ -14,8 +14,9 @@ namespace DesignPatterns
                 .Select(dpType =>
                 {
                     var dp = Activator.CreateInstance(dpType) as DesignPattern;
-                    return new ConsoleMenuItem<DesignPattern>($"{dp.Category}.{dp.Name}", MenuCallback, dp);
-                });
+                    return new ConsoleMenuItem<DesignPattern>($"{dp.Category.ToUpper()}.{dp.Name}", MenuCallback, dp);
+                })
+                .OrderBy(dp => dp.UnderlyingObject.Category);
             var menu = new ConsoleMenu<DesignPattern>($"Design Patterns", menuItems);
             menu.RunConsoleMenu();
         }
