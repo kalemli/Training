@@ -17,9 +17,16 @@ namespace DesignPatterns.Creational.Singleton
         protected LoadBalancer()
         {
             // 6.
+            // List of available servers
+
+            _servers.Add("ServerI");
+            _servers.Add("ServerII");
+            _servers.Add("ServerIII");
+            _servers.Add("ServerIV");
+            _servers.Add("ServerV");
         }
 
-        public static LoadBalancer Instance()
+        public static LoadBalancer GetLoadBalancer()
         {
             if (_instance == null) // 3.
             {
@@ -33,6 +40,20 @@ namespace DesignPatterns.Creational.Singleton
             }
 
             return _instance;
+        }
+
+        private List<string> _servers = new List<string>();
+        private Random _random = new Random();
+
+        // Simple, but effective random load balancer
+        public string Server
+        {
+            get
+
+            {
+                int r = _random.Next(_servers.Count);
+                return _servers[r].ToString();
+            }
         }
     }
 }

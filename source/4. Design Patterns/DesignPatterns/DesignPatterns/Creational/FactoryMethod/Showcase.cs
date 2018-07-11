@@ -10,7 +10,7 @@ namespace DesignPatterns.Creational.FactoryMethod
     {
         public override string Category => "Creational";
 
-        public override string Name => "Singleton";
+        public override string Name => "FactoryMethod";
 
         public override void ShowExample()
         {

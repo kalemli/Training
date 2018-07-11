@@ -8,15 +8,9 @@ namespace DesignPatterns.Creational.Builder
 {
     public class Showcase : DesignPattern
     {
-        public override string Category
-        {
-            get { return "Creational"; }
-        }
+        public override string Category => "Creational";
 
-        public override string Name
-        {
-            get { return "Builder"; }
-        }
+        public override string Name => "Builder";
 
         public override void ShowExample()
         {
