@@ -14,7 +14,16 @@ namespace DesignPatterns.Structural.Bridge
 
         public override void ShowExample()
         {
-            
+            var hotApi = new HotDrawingImplementor();
+            var coolApi = new CoolDrawingImplementor();
+
+            var hotRectangle = new Rectangle(hotApi);
+            var coolRectangle = new Rectangle(coolApi);
+
+            hotRectangle.Draw();
+            coolRectangle.Draw();
+
+            Console.ReadKey(true);
         }
     }
 }

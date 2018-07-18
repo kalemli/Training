@@ -64,6 +64,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Structural\Adapter\Showcase.cs" />
+    <Compile Include="Structural\Bridge\Circle.cs" />
+    <Compile Include="Structural\Bridge\CoolDrawingImplementor.cs" />
+    <Compile Include="Structural\Bridge\DrawingImplementor.cs" />
+    <Compile Include="Structural\Bridge\HotDrawingImplementor.cs" />
+    <Compile Include="Structural\Bridge\Rectangle.cs" />
+    <Compile Include="Structural\Bridge\Shape.cs" />
     <Compile Include="Structural\Bridge\Showcase.cs" />
     <Compile Include="Structural\Composite\Showcase.cs" />
     <Compile Include="Structural\Decorator\Showcase.cs" />

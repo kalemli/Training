@@ -35,7 +35,6 @@ namespace DesignPatterns
             ConsoleKeyInfo kb;
             Console.CursorVisible = false;
 
-
             while (!loopComplete)
             {
                 for (int i = 0; i < MenuItems.Length; i++)
@@ -55,7 +54,8 @@ namespace DesignPatterns
             Console.SetCursorPosition(0, bottomOffset);
             Console.CursorVisible = true;
             loopComplete = false;
-            MenuItems[selectedItemIndex].CallBack.Invoke(MenuItems[selectedItemIndex].UnderlyingObject);
+            var selectedMenu = MenuItems[selectedItemIndex];
+            selectedMenu.CallBack.Invoke(selectedMenu.UnderlyingObject);
         }
 
         private void HandleKeyPress(ConsoleKey pressedKey)
