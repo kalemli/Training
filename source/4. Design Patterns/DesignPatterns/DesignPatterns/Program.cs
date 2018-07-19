@@ -19,6 +19,8 @@ namespace DesignPatterns
                 .OrderBy(dp => dp.UnderlyingObject.Category);
             var menu = new ConsoleMenu<DesignPattern>($"Design Patterns", menuItems);
             menu.RunConsoleMenu();
+
+            Console.ReadKey();
         }
 
         private static void MenuCallback(DesignPattern designPattern)

@@ -81,7 +81,7 @@ namespace DesignPatterns
             if (itemIndex == selectedItemIndex)
             {
                 Console.BackgroundColor = ConsoleColor.DarkBlue;
-                Console.ForegroundColor = ConsoleColor.White;
+                Console.ForegroundColor = ConsoleColor.Yellow;
             }
 
             Console.WriteLine(" {0,-20}", this.MenuItems[itemIndex].Name);
